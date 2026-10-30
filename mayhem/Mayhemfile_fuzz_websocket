@@ -1,0 +1,9 @@
+project: savantenvs/swoole-src
+target: fuzz_websocket
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_websocket/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_websocket
+    libfuzzer: true
+    timeout: 30

@@ -1,0 +1,9 @@
+project: savantenvs/swoole-src
+target: fuzz_multipart_parser
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_multipart_parser/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_multipart_parser
+    libfuzzer: true
+    timeout: 30
