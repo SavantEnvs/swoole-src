@@ -1,0 +1,9 @@
+project: savantenvs/swoole-src
+target: fuzz_redis_reply
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_redis_reply/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_redis_reply
+    libfuzzer: true
+    timeout: 30
